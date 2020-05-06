@@ -13,7 +13,7 @@ namespace XUnitTestProject1
         private Mock<ILogger> _loggerMock = new Mock<ILogger>();
 
         [Fact]
-        public async Task Function1HelloTest()
+        public void Function1HelloTest()
         {
             _durableActivityContextMock.Setup(x => x.GetInput<string>()).Returns("John");
             var result = Function1.SayHello(_durableActivityContextMock.Object, _loggerMock.Object);
